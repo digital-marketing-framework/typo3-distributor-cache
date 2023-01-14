@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  DigitalMarketingFramework\Typo3\Distributor\Cache\:
+    resource: '../Classes/*'
+
+  DigitalMarketingFramework\Typo3\Distributor\Cache\Registry\EventListener\DistributorRegistryPluginUpdateEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'digital-marketing-framework/distributor-cache/registry-update/distributor/plugin'
+        event: DigitalMarketingFramework\Typo3\Distributor\Core\Registry\Event\DistributorRegistryPluginUpdateEvent
