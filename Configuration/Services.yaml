@@ -10,11 +10,17 @@ services:
   DigitalMarketingFramework\Typo3\Distributor\Cache\Registry\EventListener\DistributorRegistryUpdateEventListener:
     tags:
       - name: event.listener
-        identifier: 'digital-marketing-framework/distributor-cache/registry-update/distributor'
         event: DigitalMarketingFramework\Typo3\Distributor\Core\Registry\Event\DistributorRegistryUpdateEvent
 
   DigitalMarketingFramework\Typo3\Distributor\Cache\Registry\EventListener\CoreRegistryUpdateEventListener:
     tags:
       - name: event.listener
-        identifier: 'digital-marketing-framework/distributor-cache/registry-update/core'
         event: DigitalMarketingFramework\Typo3\Distributor\Core\Registry\Event\CoreRegistryUpdateEvent
+
+  # static configuration document update
+  DigitalMarketingFramework\Typo3\Distributor\Cache\ConfigurationDocument\Storage\EventListener\StaticConfigurationDocumentEventListener:
+    tags:
+      - name: event.listener
+        event: DigitalMarketingFramework\Typo3\Core\ConfigurationDocument\Storage\Event\StaticConfigurationDocumentIdentifierCollectionEvent
+      - name: event.listener
+        event: DigitalMarketingFramework\Typo3\Core\ConfigurationDocument\Storage\Event\StaticConfigurationDocumentLoadEvent
