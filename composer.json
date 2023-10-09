@@ -5,11 +5,12 @@
     "type": "typo3-cms-extension",
     "keywords": [
         "TYPO3",
+        "marketing",
         "framework",
-        "form",
         "data",
-        "submission",
         "relay",
+        "distribution",
+        "distributor",
         "cache"
     ],
     "authors": [
