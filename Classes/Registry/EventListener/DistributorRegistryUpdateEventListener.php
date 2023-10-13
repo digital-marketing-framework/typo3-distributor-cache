@@ -9,6 +9,6 @@ class DistributorRegistryUpdateEventListener extends AbstractDistributorRegistry
 {
     public function __construct()
     {
-        parent::__construct(new DistributorCacheInitialization());
+        parent::__construct(new DistributorCacheInitialization('dmf_distributor_cache'));
     }
 }
